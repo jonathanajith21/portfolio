@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Envac Internship — Jonathan Jacob Ajith</title>
+<meta name="description" content="Engineering internship at Envac, summer 2025: pneumatic waste collection systems, site operations, and a mini PWCS designed in SolidWorks.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F7F4; --ink:#16181C; --grey:#6E7178; --blue:#2742B8;
+    --blue-soft:#E8EBF8; --line:#D9DAD4; --maxw:880px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:'Archivo',sans-serif;
+    font-variation-settings:'wdth' 100;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  ::selection{background:var(--blue);color:var(--paper)}
+  a{color:inherit}
+  a:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+  .mono{font-family:'IBM Plex Mono',monospace}
+
+  /* header / nav */
+  .strip{position:sticky;top:0;z-index:10;background:var(--paper);border-bottom:1px solid var(--line);
+    font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--grey)}
+  .strip-inner{max-width:var(--maxw);margin:0 auto;padding:14px 24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+  .strip a{color:var(--grey);text-decoration:none;padding:2px 0}
+  .strip a:hover{color:var(--blue)}
+  .strip a.home{color:var(--ink);font-weight:500}
+  .strip nav{display:flex;gap:18px;flex-wrap:wrap}
+  .strip a.active{color:var(--ink);border-bottom:1px solid var(--ink)}
+
+  main{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+  /* hero (home) */
+  .hero{padding:96px 0 80px;display:flex;gap:56px;align-items:center;justify-content:space-between}
+  .hero-text{flex:1 1 auto}
+  h1{font-variation-settings:'wdth' 118;font-weight:760;font-size:clamp(44px,8vw,84px);
+    line-height:1.0;letter-spacing:-.015em;text-transform:uppercase}
+  .hero-sub{margin-top:30px;max-width:56ch;font-size:19px}
+  .hero-sub em{font-style:normal;color:var(--blue)}
+  .hero-meta{margin-top:22px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--grey);letter-spacing:.03em;line-height:2}
+  .hero-cta{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{font-family:'IBM Plex Mono',monospace;font-size:13px;text-decoration:none;padding:11px 20px;
+    border:1px solid var(--ink);transition:all .15s}
+  .btn:hover{background:var(--ink);color:var(--paper)}
+  .btn.primary{background:var(--ink);color:var(--paper)}
+  .btn.primary:hover{background:var(--blue);border-color:var(--blue)}
+  figure.portrait{flex:0 0 248px}
+  figure.portrait img{width:248px;height:248px;object-fit:cover;display:block;border:1px solid var(--line)}
+  figure.portrait figcaption{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.08em;
+    color:var(--grey);margin-top:9px;text-transform:uppercase}
+
+  /* sections */
+  section{padding:72px 0;border-top:1px solid var(--line)}
+  .zone{display:flex;align-items:baseline;gap:14px;margin-bottom:44px}
+  .zone-letter{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--paper);background:var(--ink);padding:2px 8px;letter-spacing:.05em}
+  .zone-title{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--grey)}
+
+  h2{font-variation-settings:'wdth' 110;font-weight:680;font-size:26px;line-height:1.2;letter-spacing:-.005em}
+  h3{font-variation-settings:'wdth' 108;font-weight:640;font-size:19px;margin-top:44px;margin-bottom:6px}
+  .entry-date{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--grey);white-space:nowrap}
+  .entry-tools{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--blue);margin-top:7px;letter-spacing:.02em}
+  p{margin-top:16px;max-width:66ch;color:#2A2C31}
+  p strong{font-weight:640;color:var(--ink)}
+  .lede{font-size:19px;color:var(--ink);max-width:60ch}
+
+  /* project cards on home */
+  .cards{display:grid;gap:1px;background:var(--line);border:1px solid var(--line)}
+  .card{background:var(--paper);padding:34px 32px 36px;display:block;text-decoration:none;transition:background .15s;position:relative}
+  .card:hover{background:#FFFFFF}
+  .card:hover .card-go{color:var(--blue)}
+  .card-top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+  .card-index{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--grey)}
+  .card p{font-size:15.5px;max-width:70ch}
+  .card-go{font-family:'IBM Plex Mono',monospace;font-size:12.5px;margin-top:18px;display:inline-block;color:var(--ink)}
+
+  /* links */
+  .repo-link{display:inline-block;margin-top:20px;margin-right:22px;font-family:'IBM Plex Mono',monospace;font-size:13px;
+    color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:2px;transition:all .15s}
+  .repo-link:hover{color:var(--blue);border-color:var(--blue)}
+
+  /* tables */
+  table{border-collapse:collapse;margin-top:24px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;width:100%;max-width:620px}
+  caption{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);margin-bottom:8px}
+  th,td{border:1px solid var(--line);padding:8px 13px;text-align:left;font-weight:400}
+  th{background:#EFEFEA;font-weight:500;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--grey)}
+  td.num{text-align:right}
+
+  /* detail page header */
+  .page-head{padding:72px 0 0}
+  .crumb{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--grey);letter-spacing:.05em;text-transform:uppercase}
+  .crumb a{color:var(--grey);text-decoration:none}
+  .crumb a:hover{color:var(--blue)}
+  .page-head h1{font-size:clamp(34px,5.5vw,54px);margin-top:18px}
+  .page-head .entry-tools{margin-top:14px}
+  .page-head .lede{margin-top:24px}
+  .page-body{padding:30px 0 80px}
+
+  .eqn{font-family:'IBM Plex Mono',monospace;font-size:14.5px;background:var(--blue-soft);border-left:3px solid var(--blue);
+    padding:14px 20px;margin-top:22px;max-width:620px;color:var(--ink)}
+
+  .pager{border-top:1px solid var(--line);padding:34px 0 64px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+    font-family:'IBM Plex Mono',monospace;font-size:13px}
+  .pager a{text-decoration:none;color:var(--grey)}
+  .pager a:hover{color:var(--blue)}
+
+  /* footer title block */
+  footer{border-top:1px solid var(--ink);margin-top:48px}
+  .tblock{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .tblock-grid{display:grid;grid-template-columns:repeat(4,1fr);border-left:1px solid var(--line);border-right:1px solid var(--line)}
+  .tcell{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:13px 15px 15px;min-height:66px}
+  .tcell:nth-child(4n){border-right:none}
+  .tlabel{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--grey);display:block;margin-bottom:5px}
+  .tval{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--ink);word-break:break-word}
+  .tval a{text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
+  .tval a:hover{color:var(--blue);border-color:var(--blue)}
+  .tfoot{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--grey);
+    padding:14px 0 28px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+  .reveal{opacity:0;transform:translateY(10px);animation:rise .7s ease forwards}
+  .reveal.d1{animation-delay:.08s}.reveal.d2{animation-delay:.16s}
+  @keyframes rise{to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){.reveal{animation:none;opacity:1;transform:none}html{scroll-behavior:auto}}
+
+  @media (max-width:680px){
+    .hero{padding:56px 0 52px;flex-direction:column;align-items:flex-start;gap:40px}
+    figure.portrait{order:-1}
+    figure.portrait img{width:200px;height:200px}
+    section{padding:52px 0}
+    .card{padding:26px 22px 28px}
+    .tblock-grid{grid-template-columns:repeat(2,1fr)}
+    .tcell:nth-child(4n){border-right:1px solid var(--line)}
+    .tcell:nth-child(2n){border-right:none}
+  }
+</style>
+</head>
+<body>
+
+<header class="strip">
+  <div class="strip-inner">
+    <a class="home" href="index.html">J.J. AJITH</a>
+    <nav>
+      <a href="envac.html" class="active">Internship</a>
+      <a href="gait.html">Gait Surface</a>
+      <a href="rocket.html">Rocket Sim</a>
+      <a href="darrieus.html">Darrieus VAWT</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="page-head reveal">
+    <div class="crumb"><a href="index.html">Home</a> / Experience</div>
+    <h1>Engineering Intern — Envac</h1>
+    <div class="entry-tools">JUN – AUG 2025 · PNEUMATIC WASTE COLLECTION SYSTEMS · SOLIDWORKS · SITE OPERATIONS</div>
+    <p class="lede">Envac builds automated pneumatic waste collection systems: waste dropped at an inlet is transported at high speed through underground pipe networks to a central collection station, replacing truck-based collection entirely.</p>
+  </div>
+  <div class="page-body reveal d1">
+    <h3>What I did</h3>
+    <p>Working alongside the engineering team, I shadowed engineers during site visits to see how inlets, pipe networks, and collection stations operate together as an integrated system in a live installation. I reviewed technical documentation and system schematics to understand how the fans, valves, separators, and control systems coordinate during a collection cycle, and assisted with routine inspection and maintenance observations, noting how components such as discharge valves and pipe joints are checked and serviced.</p>
+    <p>I also helped compile and organize operational data, collection cycle logs and waste volume figures, summarizing findings for the team, and sat in on meetings and design reviews to see how engineering decisions are actually made, including the recurring challenge of retrofitting these systems into existing buildings.</p>
+
+    <h3>Final project — Mini PWCS in SolidWorks</h3>
+    <p>For my final project I designed a miniature pneumatic waste collection system, modeling each component from scratch: a waste inlet hatch, a tapering drop chute, a curved transport pipe, a cyclone separator, and a collection bin. The parts were built with a range of SolidWorks features, extrudes, lofts, sweeps, revolves, shelling, and fillets, applying the company's drawing standards to keep the work consistent with professional practice. The components were then mated into a full assembly along a shared central axis, representing the path waste follows through the system.</p>
+    <table>
+      <caption>Parts list — Mini Envac PWCS assembly (DWG, A4, scale 1:10)</caption>
+      <thead><tr><th>Item</th><th>Part</th><th>Qty</th></tr></thead>
+      <tbody>
+        <tr><td class="num">1</td><td>Cyclone separator</td><td class="num">1</td></tr>
+        <tr><td class="num">2</td><td>Drop chute</td><td class="num">1</td></tr>
+        <tr><td class="num">3</td><td>Inlet hatch</td><td class="num">1</td></tr>
+        <tr><td class="num">4</td><td>Collecting bin</td><td class="num">1</td></tr>
+        <tr><td class="num">5</td><td>Transport pipe</td><td class="num">1</td></tr>
+      </tbody>
+    </table>
+    <a class="repo-link" href="Mini_Envac_PWCS_Assembly_drawing.pdf">View assembly drawing (PDF) ↗</a>
+
+    <h3>What it gave me</h3>
+    <p>Hands-on experience translating a real industrial system into a working SolidWorks model, exposure to how a complex electromechanical system is operated, inspected, and maintained in the field, and a much stronger grip on parametric modeling and assembly design.</p>
+  </div>
+  <div class="pager">
+    <a href="index.html">← Home</a>
+    <a href="gait.html">Next: Gait Surface Simulator →</a>
+  </div>
+</main>
+
+<footer id="contact">
+  <div class="tblock">
+    <div class="tblock-grid">
+      <div class="tcell"><span class="tlabel">Drawn by</span><span class="tval">Jonathan Jacob Ajith</span></div>
+      <div class="tcell"><span class="tlabel">Email</span><span class="tval"><a href="mailto:jonathan.ajith21@gmail.com">jonathan.ajith21@gmail.com</a></span></div>
+      <div class="tcell"><span class="tlabel">LinkedIn</span><span class="tval"><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/jonathan-jacob-ajith-a77a2427a">jonathan-jacob-ajith</a></span></div>
+      <div class="tcell"><span class="tlabel">GitHub</span><span class="tval"><a target="_blank" rel="noopener" href="https://github.com/jonathanajith21">jonathanajith21</a></span></div>
+    </div>
+    <div class="tfoot">
+      <span>Scale 1:1 — Do not scale drawing</span>
+      <span>Sheet 1 of 1 · Rev B · 2026</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
