@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jonathan Jacob Ajith // Mechanical Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#c8c6c6",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#001946",
+                        "on-tertiary-fixed-variant": "#872000",
+                        "surface": "#f6fafe",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#e4e2e1",
+                        "on-tertiary": "#ffffff",
+                        "outline": "#737784",
+                        "on-background": "#171c1f",
+                        "surface-container-low": "#f0f4f8",
+                        "tertiary-fixed-dim": "#ffb5a0",
+                        "error-container": "#ffdad6",
+                        "surface-container": "#eaeef2",
+                        "outline-variant": "#c3c6d5",
+                        "on-primary-fixed-variant": "#00419e",
+                        "tertiary": "#6b1800",
+                        "surface-container-high": "#e4e9ed",
+                        "secondary-container": "#e4e2e1",
+                        "on-surface-variant": "#434653",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#0047ab",
+                        "surface-tint": "#2559bd",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#edf1f5",
+                        "primary-fixed": "#dae2ff",
+                        "on-primary-container": "#a5bdff",
+                        "surface-container-highest": "#dfe3e7",
+                        "on-tertiary-container": "#ffa992",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "surface-bright": "#f6fafe",
+                        "tertiary-fixed": "#ffdbd1",
+                        "on-tertiary-fixed": "#3b0900",
+                        "surface-variant": "#dfe3e7",
+                        "on-secondary-fixed-variant": "#474747",
+                        "on-secondary-container": "#656464",
+                        "secondary": "#5f5e5e",
+                        "on-secondary": "#ffffff",
+                        "primary": "#00327d",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#932400",
+                        "primary-fixed-dim": "#b1c5ff",
+                        "on-surface": "#171c1f",
+                        "background": "#f6fafe",
+                        "inverse-primary": "#b1c5ff",
+                        "inverse-surface": "#2c3134",
+                        "surface-dim": "#d6dade"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin_mobile": "20px",
+                        "margin_desktop": "64px",
+                        "base_grid": "4px",
+                        "component_padding": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "title-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md-mobile": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "caption-mono": ["JetBrains Mono"],
+                        "label-mono": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "title-sm": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "caption-mono": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                        "label-mono": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #f6fafe;
+            background-image: 
+                linear-gradient(to right, rgba(115, 119, 132, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(115, 119, 132, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .corner-accent::before, .corner-accent::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-color: #00327d;
+            pointer-events: none;
+        }
+
+        .corner-accent-top-left::before { top: -2px; left: -2px; border-top: 2px solid; border-left: 2px solid; }
+        .corner-accent-bottom-right::after { bottom: -2px; right: -2px; border-bottom: 2px solid; border-right: 2px solid; }
+
+        .dashed-line {
+            background-image: linear-gradient(to right, #737784 50%, transparent 50%);
+            background-size: 8px 1px;
+            background-repeat: repeat-x;
+            height: 1px;
+        }
+
+        .cursor-crosshair { cursor: crosshair; }
+    </style>
+</head>
+<body class="font-body-md text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation Shell -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-sm border-b border-outline dark:border-outline-variant">
+<div class="flex justify-between items-center w-full px-margin_mobile md:px-margin_desktop py-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="architecture">architecture</span>
+<span class="text-title-sm font-headline-md uppercase tracking-widest text-primary">AJITH_J.J. // ENG-001</span>
+</div>
+<div class="hidden md:flex gap-8">
+<a class="text-label-mono font-label-mono uppercase text-primary font-bold" href="#projects">PROJECTS</a>
+<a class="text-label-mono font-label-mono uppercase text-on-surface-variant hover:text-primary transition-colors" href="#specs">SPECS</a>
+<a class="text-label-mono font-label-mono uppercase text-on-surface-variant hover:text-primary transition-colors" href="#log">LOG</a>
+</div>
+<div class="text-label-mono font-label-mono text-primary bg-primary-container/10 px-3 py-1 border border-primary">
+                SCALE 1:1
+            </div>
+</div>
+</header>
+<main class="pt-24 pb-20">
+<!-- Hero Section -->
+<section class="relative px-margin_mobile md:px-margin_desktop py-12 md:py-24 border-b border-outline overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="text-label-mono font-label-mono text-[120px] leading-none select-none">REV_04</span>
+</div>
+<div class="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-8 flex flex-col justify-center">
+<div class="inline-flex items-center gap-2 text-label-mono font-label-mono text-secondary mb-4">
+<span class="text-primary font-bold">[00 // SRC]</span>
+<span>INITIALIZING_PROFILE.EXE</span>
+</div>
+<h1 class="font-display-lg text-display-lg md:text-display-lg text-primary mb-6">Jonathan Jacob Ajith</h1>
+<p class="font-headline-md text-headline-md-mobile md:text-headline-md text-on-surface-variant mb-8 max-w-2xl">
+                        Mechanical Engineering student at UMass Amherst. Dynamics, controls, and human-robot interaction.
+                    </p>
+<div class="border-l-2 border-primary pl-6 py-2 mb-12">
+<p class="text-body-md text-on-surface italic">
+                            "I like taking a physical system, writing down its equations of motion, and building the simulation that tests whether I actually understand it."
+                        </p>
+</div>
+<div class="flex flex-wrap gap-3">
+<div class="flex items-center gap-2 px-4 py-2 bg-surface-container border border-outline font-label-mono text-label-mono uppercase">
+<span class="w-2 h-2 rounded-full bg-[#FF6B00]"></span> MATLAB
+                        </div>
+<div class="flex items-center gap-2 px-4 py-2 bg-surface-container border border-outline font-label-mono text-label-mono uppercase">
+<span class="w-2 h-2 rounded-full bg-[#FF6B00]"></span> SOLIDWORKS
+                        </div>
+<div class="flex items-center gap-2 px-4 py-2 bg-surface-container border border-outline font-label-mono text-label-mono uppercase">
+<span class="w-2 h-2 rounded-full bg-[#FF6B00]"></span> FREECAD
+                        </div>
+<div class="flex items-center gap-2 px-4 py-2 bg-surface-container border border-outline font-label-mono text-label-mono uppercase">
+<span class="w-2 h-2 rounded-full bg-[#FF6B00]"></span> SIMULATION &amp; SYSTEM ID
+                        </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section [A]: Experience -->
+<section class="px-margin_mobile md:px-margin_desktop py-16 border-b border-outline">
+<div class="flex items-center gap-4 mb-12">
+<span class="font-label-mono text-label-mono text-primary">[A-1]</span>
+<h2 class="font-headline-md text-headline-md uppercase tracking-widest">EXPERIENCE</h2>
+<div class="flex-grow h-px bg-outline/30"></div>
+</div>
+<div class="relative p-gutter border border-outline bg-surface-container-lowest corner-accent corner-accent-top-left">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
+<div>
+<h3 class="text-title-sm font-headline-md text-primary">Engineering Intern — Envac</h3>
+<p class="text-label-mono font-label-mono text-on-surface-variant">JUN – AUG 2025 // PNEUMATIC WASTE COLLECTION</p>
+</div>
+<span class="text-label-mono font-label-mono text-primary border border-primary px-2 py-1 mt-2 md:mt-0">STATION_ID: ENV-01</span>
+</div>
+<p class="text-body-md text-on-surface-variant max-w-3xl mb-8">
+                    A summer with the engineering team behind automated pneumatic waste collection: site visits to live installations, system schematics and inspection routines, operational data analysis, and a final project modeling a complete mini PWCS from scratch in SolidWorks.
+                </p>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="p-3 border-l border-outline bg-surface-container-low">
+<span class="block text-caption-mono font-caption-mono text-secondary uppercase">Project Scope</span>
+<span class="text-label-mono font-label-mono">Pneumatic Systems</span>
+</div>
+<div class="p-3 border-l border-outline bg-surface-container-low">
+<span class="block text-caption-mono font-caption-mono text-secondary uppercase">Primary Tool</span>
+<span class="text-label-mono font-label-mono">SolidWorks</span>
+</div>
+<div class="p-3 border-l border-outline bg-surface-container-low">
+<span class="block text-caption-mono font-caption-mono text-secondary uppercase">Analysis</span>
+<span class="text-label-mono font-label-mono">Operational Data</span>
+</div>
+<div class="p-3 border-l border-outline bg-surface-container-low">
+<span class="block text-caption-mono font-caption-mono text-secondary uppercase">Status</span>
+<span class="text-label-mono font-label-mono text-primary">COMPLETE</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section [B]: Projects -->
+<section class="px-margin_mobile md:px-margin_desktop py-16 border-b border-outline bg-surface-container-low/30" id="projects">
+<div class="flex items-center gap-4 mb-12">
+<span class="font-label-mono text-label-mono text-primary">[B-1]</span>
+<h2 class="font-headline-md text-headline-md uppercase tracking-widest">PERSONAL PROJECTS</h2>
+<div class="flex-grow h-px bg-outline/30"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+<!-- Project 1 -->
+<article class="group relative flex flex-col border border-outline bg-surface-container-lowest corner-accent corner-accent-bottom-right transition-all hover:-translate-y-1 hover:shadow-lg">
+<div class="p-4 border-b border-outline flex justify-between items-center bg-surface-container">
+<span class="text-caption-mono font-caption-mono text-primary font-bold">PART NO. P-2024-01</span>
+<span class="text-caption-mono font-caption-mono text-secondary uppercase">Dynamics</span>
+</div>
+<div class="aspect-video overflow-hidden border-b border-outline relative">
+<img alt="" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A highly detailed technical diagram on a grid background showing a schematic of a robotic leg interface and gait simulator mechanism. The drawing features clean blue and grey technical lines, mathematical labels like 'Variable Stiffness Mechanism', and physics symbols for mass and damping. The aesthetic is precisely that of a professional mechanical engineering blueprint, with clean typography and sharp, high-contrast drafting lines in a bright light-mode setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2g8Lvkj_y-3mv8iVB_29cu87Z3zIWiUK0sWx2a078FJgAUcCkQComSQLKmtqqGxh8Z7gEvncc9HPADobj3gE1J7r4IuIg1IPWVD97989x5CPeFZ-uORba_xQqQVrDGOPu_RYBExenux87YBiO79ZxDIYP3HXLEgvRA5-l_KQe6_EHMvWKpl2jbMpLGGAVIe2GZ1XLlkUrkwl6lCupuV821rPN86SjBe1l4wrZQfr8vBs-vZ8iFNG3quN6P8bEdnRs6yxpBhBry-c"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
+</div>
+<div class="p-component_padding flex-grow">
+<h3 class="text-title-sm font-headline-md text-primary mb-2">Gait Surface Simulator</h3>
+<p class="text-body-md text-on-surface-variant mb-6 line-clamp-3">
+                            Walking surfaces modeled as a second-order mass-spring-damper. System identification and frequency response analysis.
+                        </p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-1 text-caption-mono font-label-mono border border-outline uppercase">MATLAB</span>
+<span class="px-2 py-1 text-caption-mono font-label-mono border border-outline uppercase">ODE45</span>
+<span class="px-2 py-1 text-caption-mono font-label-mono border border-outline uppercase">SYS_ID</span>
+</div>
+</div>
+<a class="block p-4 text-label-mono font-label-mono text-primary border-t border-outline text-center uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-colors cursor-crosshair" href="#">
+                        VIEW_DATA_PACKET.PDF
+                    </a>
+</article>
+<!-- Project 2 -->
+<article class="group relative flex flex-col border border-outline bg-surface-container-lowest corner-accent corner-accent-bottom-right transition-all hover:-translate-y-1 hover:shadow-lg">
+<div class="p-4 border-b border-outline flex justify-between items-center bg-surface-container">
+<span class="text-caption-mono font-caption-mono text-primary font-bold">PART NO. P-2024-02</span>
+<span class="text-caption-mono font-caption-mono text-secondary uppercase">Aerospace</span>
+</div>
+<div class="aspect-video overflow-hidden border-b border-outline relative">
+<img alt="" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A complex technical drawing of a rocket trajectory arc with force vectors and flight dynamics equations. The schematic uses a parchment-like off-white background with blue blueprint ink. Arrows point to aerodynamic forces and pitch axes, with clear labels for 'Apogee' and 'Landing Point'. The style is reminiscent of NASA-grade technical documentation, emphasizing structural integrity and high-precision mathematics in a clean, professional layout." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQQFGuJBbJDICoqCCbZ88mA-G1d5miXdSqSyaj-hTAIOR4tVCnzYlj5YTEGsXR41GFlx48qLA6U225BOo3-f0CHYN8_jcTJAVsdLAcqZGtB80xLv8hdYXLTsamOggWzw-oqnDlZvADbs77v8FwdTHld7pXY0G4I942T3dyuuU3nEDe931UuSTuO24e16dtjdwdx2KpaD32xsB1Vai9Td0K-46pcUYh_sBD71WQ95w5zweFIXWxKkjmb8xJUo1zVcA7cwOcOI_l9yo"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
+</div>
+<div class="p-component_padding flex-grow">
+<h3 class="text-title-sm font-headline-md text-primary mb-2">Rocket Trajectory Sim</h3>
+<p class="text-body-md text-on-surface-variant mb-6 line-clamp-3">
+                            A full vertical-flight simulator with static-stability analysis. Validated against OpenRocket data.
+                        </p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-1 text-caption-mono font-label-mono border border-outline uppercase">MATLAB</span>
+<span class="px-2 py-1 text-caption-mono font-label-mono border border-outline uppercase">FLIGHT_DYNAMICS</span>
+</div>
+</div>
+<a class="block p-4 text-label-mono font-label-mono text-primary border-t border-outline text-center uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-colors cursor-crosshair" href="#">
+                        VIEW_DATA_PACKET.PDF
+                    </a>
+</article>
+<!-- Project 3 -->
+<article class="group relative flex flex-col border border-outline bg-surface-container-lowest corner-accent corner-accent-bottom-right transition-all hover:-translate-y-1 hover:shadow-lg">
+<div class="p-4 border-b border-outline flex justify-between items-center bg-surface-container">
+<span class="text-caption-mono font-caption-mono text-primary font-bold">PART NO. P-2024-03</span>
+<span class="text-caption-mono font-caption-mono text-secondary uppercase">Renewables</span>
+</div>
+<div class="aspect-video overflow-hidden border-b border-outline relative">
+<img alt="" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A technical CAD-style blueprint of a Darrieus Vertical Axis Wind Turbine. The illustration is centered on a grid pattern and includes detailed callouts for airfoil sections, mast, and central column. Flow lines show aerodynamic patterns around the rotor blades. The visual style is highly clinical and technical, using charcoal and blue drafting lines to convey complex mechanical assembly and fluid dynamics analysis in a bright, modern setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJM_C4K7eR0R5r_f5V1GpaLlrjS4b3MAYg_iApSULOjiSs5YiTUCDlFFhBk9hGGdcIoISxgl7ySL1ReDooXrN263RlkrGjDhepR92OZUKHoH3R96TC0JX0fYsFUSqf0RRidCuYn8FTyDD73lL_MvrzAma-TL4y5uMB3KVlfV7OTAuM8JPUMaOyepZcFSC21zKShKjRJqu7dX9LCx3ExTsXULHluoaw03PcH2KTHk6g5bVh7UJCJ188uUvtC0W3Pa5anhUWFbpSVXg"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
+</div>
+<div class="p-component_padding flex-grow">
+<h3 class="text-title-sm font-headline-md text-primary mb-2">Darrieus VAWT Design</h3>
+<p class="text-body-md text-on-surface-variant mb-6 line-clamp-3">
+                            Double Multiple Streamtube theory analysis of high-solidity rotor designs. DMST solver cross-checks.
+                        </p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-1 text-caption-mono font-label-mono border border-outline uppercase">FREECAD</span>
+<span class="px-2 py-1 text-caption-mono font-label-mono border border-outline uppercase">DMST_THEORY</span>
+</div>
+</div>
+<a class="block p-4 text-label-mono font-label-mono text-primary border-t border-outline text-center uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-colors cursor-crosshair" href="#">
+                        VIEW_DATA_PACKET.PDF
+                    </a>
+</article>
+</div>
+</section>
+<!-- Section [C]: Leadership & Certifications -->
+<section class="px-margin_mobile md:px-margin_desktop py-16">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-margin_desktop">
+<!-- Involvement -->
+<div>
+<div class="flex items-center gap-4 mb-8">
+<span class="font-label-mono text-label-mono text-primary">[C-1]</span>
+<h2 class="font-headline-md text-headline-md uppercase tracking-widest">LEADERSHIP</h2>
+</div>
+<div class="space-y-8">
+<div class="border-l-2 border-outline/30 pl-6 pb-6 relative">
+<div class="absolute -left-[9px] top-0 w-4 h-4 bg-primary rounded-full"></div>
+<h4 class="text-title-sm font-headline-md">Kenya Project — EWB</h4>
+<p class="text-label-mono font-label-mono text-primary mb-2">2025 – PRESENT</p>
+<p class="text-body-md text-on-surface-variant">Working on solar-powered pump systems for clean water infrastructure in Imale, Kenya. Solar pump design and hydraulic analysis.</p>
+</div>
+<div class="border-l-2 border-outline/30 pl-6 relative">
+<div class="absolute -left-[9px] top-0 w-4 h-4 bg-outline rounded-full"></div>
+<h4 class="text-title-sm font-headline-md">NEXUS Innovation Society</h4>
+<p class="text-label-mono font-label-mono text-primary mb-2">GRADES 11–12</p>
+<p class="text-body-md text-on-surface-variant">Co-Founder &amp; Lead Organizer. Managed STEM Olympiads and engineering competitions for 400+ students.</p>
+</div>
+</div>
+</div>
+<!-- Certifications -->
+<div>
+<div class="flex items-center gap-4 mb-8">
+<span class="font-label-mono text-label-mono text-primary">[D-1]</span>
+<h2 class="font-headline-md text-headline-md uppercase tracking-widest">CERTIFICATIONS</h2>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-label-mono text-label-mono">
+<thead>
+<tr class="border-b-2 border-outline text-secondary uppercase">
+<th class="py-3 pr-4">COURSE</th>
+<th class="py-3 pr-4">INSTITUTION</th>
+<th class="py-3">DATE</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline/20">
+<tr>
+<td class="py-3 pr-4">Engineering Mechanics</td>
+<td class="py-3 pr-4">Georgia Tech</td>
+<td class="py-3">JUL 2024</td>
+</tr>
+<tr>
+<td class="py-3 pr-4">Engineering Design</td>
+<td class="py-3 pr-4">Univ of Leeds</td>
+<td class="py-3">JUN 2024</td>
+</tr>
+<tr>
+<td class="py-3 pr-4">Materials Science</td>
+<td class="py-3 pr-4">UC Davis</td>
+<td class="py-3">JUN 2024</td>
+</tr>
+<tr>
+<td class="py-3 pr-4">Renewable Energy</td>
+<td class="py-3 pr-4">Duke University</td>
+<td class="py-3">JUN 2024</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-surface-container-highest border-t-2 border-outline">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter p-margin_mobile md:p-margin_desktop items-start">
+<div class="flex flex-col gap-4">
+<span class="text-title-sm font-headline-md text-primary uppercase">J.J. AJITH</span>
+<p class="text-caption-mono font-caption-mono text-on-surface-variant max-w-xs">
+                    Mechanical engineering portfolio specializing in dynamics, simulation, and automated systems.
+                </p>
+<p class="text-caption-mono font-caption-mono mt-4">
+                    © 2024 AJITH_MECHANICAL // REV: 04.22
+                </p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-label-mono font-label-mono uppercase text-secondary mb-2 underline decoration-primary decoration-2 underline-offset-4">Connectivity</span>
+<a class="text-label-mono font-label-mono uppercase text-on-surface-variant hover:text-primary transition-opacity" href="#">LinkedIn</a>
+<a class="text-label-mono font-label-mono uppercase text-on-surface-variant hover:text-primary transition-opacity" href="#">GitHub</a>
+<a class="text-label-mono font-label-mono uppercase text-on-surface-variant hover:text-primary transition-opacity" href="#">Mail</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-label-mono font-label-mono uppercase text-secondary mb-2 underline decoration-primary decoration-2 underline-offset-4">Technical Details</span>
+<div class="flex justify-between items-center text-caption-mono font-caption-mono border-b border-outline/20 py-1">
+<span>GRID_SNAP</span>
+<span class="text-primary">ACTIVE</span>
+</div>
+<div class="flex justify-between items-center text-caption-mono font-caption-mono border-b border-outline/20 py-1">
+<span>DOC_VERSION</span>
+<span>1.0.4-BETA</span>
+</div>
+<div class="flex justify-between items-center text-caption-mono font-caption-mono py-1">
+<span>RENDER_MODE</span>
+<span>SCHEMATIC</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Mobile Navigation Shell -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 bg-surface border-t border-outline">
+<div class="flex justify-around items-center w-full pb-safe h-16">
+<a class="flex flex-col items-center justify-center text-primary border-t-2 border-primary pt-1" href="#projects">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="text-label-mono font-label-mono uppercase text-[10px]">PROJECTS</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary pt-1" href="#specs">
+<span class="material-symbols-outlined" data-icon="settings_input_component">settings_input_component</span>
+<span class="text-label-mono font-label-mono uppercase text-[10px]">SPECS</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary pt-1" href="#log">
+<span class="material-symbols-outlined" data-icon="history_edu">history_edu</span>
+<span class="text-label-mono font-label-mono uppercase text-[10px]">LOG</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary pt-1" href="#archive">
+<span class="material-symbols-outlined" data-icon="folder_open">folder_open</span>
+<span class="text-label-mono font-label-mono uppercase text-[10px]">ARCHIVE</span>
+</a>
+</div>
+</nav>
+<script>
+        // Micro-interaction: Update local time in coordinate format
+        function updateCoordTime() {
+            const now = new Date();
+            const timeStr = now.getHours().toString().padStart(2, '0') + ':' + 
+                          now.getMinutes().toString().padStart(2, '0') + ':' + 
+                          now.getSeconds().toString().padStart(2, '0');
+            const footerDate = document.querySelector('p.text-caption-mono.mt-4');
+            if (footerDate) {
+                // Keep the original text but append the dynamic time
+                const baseText = "© 2024 AJITH_MECHANICAL // REV: 04.22";
+                footerDate.textContent = baseText + " // T: " + timeStr;
+            }
+        }
+        setInterval(updateCoordTime, 1000);
+        updateCoordTime();
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body></html>
